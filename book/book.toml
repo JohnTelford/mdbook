@@ -45,5 +45,5 @@ additional-js = ["js/custom.js"]
 enable = false
 
 [preprocessor.toc]
-# Optional: add automatic Table of Contents support
 command = "mdbook-toc"
+renderer = ["html"]
