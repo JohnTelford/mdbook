@@ -1,0 +1,49 @@
+[book]
+title = "My mdBook Project"
+author = "John Telford"
+description = "A modern, Markdown-powered site built with mdBook."
+language = "en"
+
+[build]
+# Where the HTML output will be placed
+build-dir = "book"
+# Automatically create missing chapters listed in SUMMARY.md
+create-missing = true
+# Keep older builds clean
+use-default-preprocessors = true
+
+[output.html]
+# Default visual theme
+default-theme = "light"
+# Preferred dark mode theme
+preferred-dark-theme = "navy"
+
+# Show copy buttons on code blocks
+copy-js = true
+
+# Enable search feature
+search.enable = true
+
+# Allow collapsible sections in sidebar
+fold.enable = true
+
+# Customize the title bar and favicon (optional)
+# favicon = "src/assets/favicon.png"
+
+# Add repository links (great for GitHub)
+git-repository-url = "https://github.com/yourusername/yourbook"
+edit-url-template = "https://github.com/yourusername/yourbook/edit/main/{path}"
+
+# Control HTML renderer options
+curly-quotes = true
+mathjax-support = true
+additional-css = ["css/custom.css"]
+additional-js = ["js/custom.js"]
+
+[output.html.print]
+# If you want to generate a printable version
+enable = false
+
+[preprocessor.toc]
+# Optional: add automatic Table of Contents support
+command = "mdbook-toc"
