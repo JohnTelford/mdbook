@@ -4,22 +4,31 @@ author = "John Telford"
 description = "A modern, Markdown-powered site built with mdBook."
 language = "en"
 
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]
+
+[output.html]
+theme = "theme"
+additional-css = ["theme/pagetoc.css"]
+additional-js = ["theme/pagetoc.js"]
+
+[preprocessor.pagetoc]
+# Heading levels to include in the per-page TOC
+toc_levels = [2, 3, 4]
+# Whether to scroll TOC automatically as user scrolls content
+scroll = true
+
 [build]
 # Where the HTML output will be placed
 build-dir = "book"
-# Automatically create missing chapters listed in SUMMARY.md
-create-missing = true
-# Keep older builds clean
-use-default-preprocessors = true
 
 [output.html]
 # Default visual theme
 default-theme = "light"
 # Preferred dark mode theme
-preferred-dark-theme = "navy"
+preferred-dark-theme = "rust"
 
-# Show copy buttons on code blocks
-copy-js = true
 
 # Enable search feature
 search.enable = true
@@ -31,19 +40,24 @@ fold.enable = true
 # favicon = "src/assets/favicon.png"
 
 # Add repository links (great for GitHub)
-git-repository-url = "https://github.com/yourusername/yourbook"
-edit-url-template = "https://github.com/yourusername/yourbook/edit/main/{path}"
+# git-repository-url = "https://github.com/yourusername/yourbook"
+# edit-url-template = "https://github.com/yourusername/yourbook/# edit/main/{path}"
 
 # Control HTML renderer options
-curly-quotes = true
-mathjax-support = true
-additional-css = ["css/custom.css"]
-additional-js = ["js/custom.js"]
-
+#curly-quotes = true
+#mathjax-support = true
+#additional-css = ["css/custom.css"]
+#additional-js = ["js/custom.js"]
+#
 [output.html.print]
 # If you want to generate a printable version
 enable = false
 
-[preprocessor.toc]
-command = "mdbook-toc"
-renderer = ["html"]
+
+#[output.html]
+#additional-js = ["js/pagetoc.js"]
+#additional-css = ["theme/pagetoc.css"]
+#
+
+
+
