@@ -1,0 +1,20 @@
+[book]
+title = "My Documentation"
+author = "John Telford"
+language = "en"
+multilingual = false
+
+[build]
+build-dir = "book"
+
+[output.html]
+theme = "theme"
+default-theme = "light"
+additional-css = ["theme/pagetoc.css"]
+additional-js  = ["theme/pagetoc.js"]
+
+[preprocessor.pagetoc]
+# Heading levels to include in the per-page TOC
+toc_levels = [2, 3, 4]
+# Whether to scroll TOC automatically as user scrolls content
+scroll = true
