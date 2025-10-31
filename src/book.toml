@@ -12,22 +12,21 @@ renderer = ["html"]
 theme = "theme"
 additional-css = ["theme/pagetoc.css"]
 additional-js = ["theme/pagetoc.js"]
+# Default visual theme
+default-theme = "light"
+# Preferred dark mode theme
+preferred-dark-theme = "rust"
 
-[preprocessor.pagetoc]
-# Heading levels to include in the per-page TOC
-toc_levels = [2, 3, 4]
-# Whether to scroll TOC automatically as user scrolls content
-scroll = true
+#[preprocessor.pagetoc]
+## Heading levels to include in the per-page TOC
+#toc_levels = [2, 3, 4]
+## Whether to scroll TOC automatically as user scrolls content
+#scroll = true
 
 [build]
 # Where the HTML output will be placed
 build-dir = "book"
 
-[output.html]
-# Default visual theme
-default-theme = "light"
-# Preferred dark mode theme
-preferred-dark-theme = "rust"
 
 
 # Enable search feature
