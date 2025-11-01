@@ -1,0 +1,5 @@
+[book]
+authors = ["JohnTelford"]
+language = "en"
+src = "src"
+title = "tech-memoirs"
